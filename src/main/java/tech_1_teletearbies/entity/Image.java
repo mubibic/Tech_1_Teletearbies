@@ -1,4 +1,4 @@
-package entity;
+package tech_1_teletearbies.entity;
 
 import javax.persistence.*;
 
@@ -21,12 +21,10 @@ public class Image {
     public Image() {
     }
 
-    public Image(Integer id, String name, String url) {
-        this.id = id;
+    public Image(String name, String url) {
         this.name = name;
         this.url = url;
     }
-
 
     public Integer getId() {
         return id;

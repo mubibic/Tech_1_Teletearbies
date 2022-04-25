@@ -1,7 +1,6 @@
-package repository;
+package tech_1_teletearbies.repository;
 
-import entity.Image;
-import org.springframework.beans.factory.annotation.Autowired;
+import tech_1_teletearbies.entity.Image;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

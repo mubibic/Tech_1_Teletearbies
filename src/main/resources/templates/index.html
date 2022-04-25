@@ -1,12 +1,10 @@
-
 <head th:replace="fragments/header :: head"></head>
 
-<link rel="stylesheet" type="text/css" href="style.css" />
 <body>
 <h1 class="text-center"> Bouncy Balls </h1>
 <p class="text-center"> Teletearbies</p>
-<div class="mx-auto" >
-    <div class="card"  >
+<div class="mx-auto" style="width: 300px;">
+    <div class="card">
         <video controls loop autoplay muted class="card-img-top" th:src="@{/image/bb2.mov}" alt="Card image cap">
             <source src="bb2.mov" type="video/mp4">
             <source src="bb2.ogg" type="video/ogg">
@@ -19,8 +17,5 @@
         </div>
     </div>
 </div>
-</div>
-
-
 </body>
 
