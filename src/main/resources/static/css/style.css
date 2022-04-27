@@ -1,10 +1,15 @@
-html {
-    height: 100%;
-}
+html, body {
+    background: #F7F5E6;
+    height: 300%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 
+}
 body {
     background-image: linear-gradient(to bottom right, #bff6af, rgb(250, 231, 163), rgba(171, 186, 246, 0.99), rgb(189, 166, 253));
 }
+
 
 .card {
     float: none;
@@ -36,8 +41,17 @@ body {
     text-decoration: underline;
 }
 
+
+
+.slider {
+    margin: 0 auto;
+    max-width: 940px;
+
+}
+
 .slide_viewer {
-    height: 500px;
+
+    height: 600px;
     overflow: hidden;
     position: relative;
 }
@@ -146,4 +160,3 @@ a.slide_btn {
         right: 50px;
     }
 }
-

@@ -18,6 +18,11 @@ public class ImageController {
         return "index";
     }
 
+    @RequestMapping("/git")
+    public String codeSnippets() {
+        return "codesnippets";
+    }
+
 
     @RequestMapping("/code")
     //The model is the one responsible for the relationship between the frontend and backend
