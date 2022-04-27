@@ -1,12 +1,25 @@
-<head th:replace="fragments/header :: head"></head>
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml%22%3E" >
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style2.css}" media="screen">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Welcome</title>
+</head>
 <body>
 <div class="row row-cols-1 row-cols-md-2">
     <div class="col mb-4">
         <div class="card">
             <img th:src="@{/image/bouncing_balls_main.jpg}">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">BouncingBallsMain</h5>
+                <p class="card-text">Our BouncingBallMain class is responsible for setting up the JFrame, initializing the
+                    objects needed for the application (ball, location), creating its own thread for each
+                    ball in use, and running them.</p>
             </div>
         </div>
     </div>
@@ -14,8 +27,13 @@
         <div class="card">
             <img th:src="@{/image/ballAttributes.jpg}">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">Ball</h5>
+                <p class="card-text">Each ball object contains an id and a positionList that stores every position. This
+                    way, each ball “knows” the locations of all the other balls. Since the ball’s id is equal
+                    to the position’s index in the list, each ball also knows which position belongs to
+                    them, so the ball doesn’t check a collision with itself. The other variables are used to
+                    determine the direction, speed, and color of the ball, as well as the size of the
+                    bouncing area.</p>
             </div>
         </div>
     </div>
@@ -23,8 +41,9 @@
         <div class="card">
             <img th:src="@{/image/position.jpg}">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">Position</h5>
+                <p class="card-text">The ball’s position (int x, y) is stored in its own class called Position. Each ball
+                    contains a list with all the positions, used to later check the collisions between them.</p>
             </div>
         </div>
     </div>
@@ -32,8 +51,12 @@
         <div class="card">
             <img th:src="@{/image/moveBall.jpg}">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">moveBall</h5>
+                <p class="card-text">The moveBall method changes the location of the ball object, by checking its
+                    direction in the coordination system, and adding or reducing a new value to/from it.
+                    For example, If the ball should move to the left, its int x value will be increased. The
+                    Swing’s (JPanel) inner method, “repaint()”, is used for graphically displaying the ball
+                    in its new location.</p>
             </div>
         </div>
     </div>
@@ -41,17 +64,22 @@
         <div class="card">
             <img th:src="@{/image/ballCollision.jpg}">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">ballCollision</h5>
+                <p class="card-text">The ballCollision method first removes the checked ball’s position from the list of all
+                    positions. Then calls the isColliding method which calculates the two checked balls
+                    hitboxes with an equation, and checks if they overlap. If the balls do collide, their
+                    speed and color are changed and their direction is reversed.</p>
             </div>
         </div>
     </div>
     <div class="col mb-4">
-        <div class="card">
+        <div class="card" >
             <img th:src="@{/image/wallCollision.jpg}">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">wallCollision</h5>
+                <p class="card-text">The wallCollision method checks if a ball’s position has reached one of the sides of
+                    the bouncing area. If it does, its direction is changed, it receives a random speed,
+                    and it also changes to a random color.</p>
             </div>
         </div>
     </div>
