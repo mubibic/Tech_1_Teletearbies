@@ -22,9 +22,7 @@ public class ImageController {
     @RequestMapping("/code")
     //The model is the one responsible for the relationship between the frontend and backend
     public String showImageList(Model model) {
-        List<Image> imageList = imageService.getAllImages();
-        model.addAttribute("imageList", imageList);
-        return "bouncingballs";
+        return "snippets";
     }
 
 }
