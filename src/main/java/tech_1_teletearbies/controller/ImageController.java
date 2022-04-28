@@ -24,12 +24,23 @@ public class ImageController {
         return "gitHub";
     }
 
-
+   /* @RequestMapping("/database")
+    public String database() {
+        return "gitHub";
+    }*/
 
     @RequestMapping("/code")
     //The model is the one responsible for the relationship between the frontend and backend
     public String showImageList(Model model) {
         return "snippets";
+    }
+
+    @RequestMapping("/database")
+    //The model is the one responsible for the relationship between the frontend and backend
+    public String database(Model model) {
+        List<Image> listImages = imageService.getAllImages();
+        model.addAttribute("listImages", listImages);
+        return "database";
     }
 
 }

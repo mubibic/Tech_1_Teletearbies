@@ -14,16 +14,16 @@ public class Image {
     @Column(nullable = false, unique = false, length = 45, name = "name")
     private String name;
 
-    @Column(nullable = false, unique = false, length = 45, name = "url")
-    private String url;
+/*    @Column(nullable = false, unique = false, length = 45, name = "url")
+    private String url;*/
 
 
     public Image() {
     }
 
-    public Image(String name, String url) {
+    public Image(String name) {
         this.name = name;
-        this.url = url;
+     /*   this.url = url;*/
     }
 
     public Integer getId() {
@@ -42,13 +42,13 @@ public class Image {
         this.name = name;
     }
 
-    public String getUrl() {
+ /*   public String getUrl() {
         return url;
     }
 
     public void setUrl(String url) {
         this.url = url;
-    }
+    }*/
 }
 
 

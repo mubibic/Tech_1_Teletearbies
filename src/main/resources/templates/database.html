@@ -1,0 +1,25 @@
+<head th:replace="fragments/header :: head"></head>
+<body>
+<div class="container-fluid text-center">
+    <div>
+        <h2 class="border-bottom-5">Team Members</h2>
+    </div>
+    <table class="table" table-bordered>
+        <thead class ="thead-dark"></thead>
+        <tr>
+            <th>ID</th>
+            <th>Team member name</th>
+            <th></th>
+        </tr>
+        <tbody>
+        <th:block th:each="image : ${listImages}">
+            <tr>
+                <td>[[${image.id}]]</td>
+                <td>[[${image.name}]]</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

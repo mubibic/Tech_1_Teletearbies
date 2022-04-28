@@ -13,15 +13,14 @@ public class InitialDatabase {
    @Autowired
    public ImageService imageService;
 
-   /*@PostConstruct
+   @PostConstruct
    public void initializeDB(){
-      Image image1 = new Image("yellowTeletearbies", "image/yellowTeletearbies.jpg");
-      Image image2 = new Image("blueTeletearbies", "image/blueTeletearbies.png");
-      Image image3 = new Image("greenTeletearbies", "image/greenTeletearbies.png");
+      Image image1 = new Image("Bogi Wogi");
+      Image image2 = new Image("Fe Buffet");
+      Image image3 = new Image("Dani Banani");
+      Image image4 = new Image("Mubrick Brack");
 
-      imageService.saveImage(image1);
-      imageService.saveImage(image2);
-      imageService.saveImage(image3);
-   }*/
+
+   }
 
 }
