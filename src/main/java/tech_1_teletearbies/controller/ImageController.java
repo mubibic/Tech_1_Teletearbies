@@ -13,15 +13,17 @@ import java.util.List;
 public class ImageController {
     @Autowired
     ImageService imageService;
+
     @RequestMapping("/")
     public String index() {
         return "index";
     }
 
     @RequestMapping("/git")
-    public String codeSnippets() {
-        return "codesnippets";
+    public String gitHub() {
+        return "gitHub";
     }
+
 
 
     @RequestMapping("/code")
