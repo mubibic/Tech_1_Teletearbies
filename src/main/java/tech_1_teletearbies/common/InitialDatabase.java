@@ -1,9 +1,9 @@
 package tech_1_teletearbies.common;
 
-import tech_1_teletearbies.Service.ImageService;
+import tech_1_teletearbies.Service.UrlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import tech_1_teletearbies.entity.Image;
+import tech_1_teletearbies.entity.Url;
 
 import javax.annotation.PostConstruct;
 
@@ -11,16 +11,12 @@ import javax.annotation.PostConstruct;
 public class InitialDatabase {
 
    @Autowired
-   public ImageService imageService;
+   public UrlService urlService;
 
-   @PostConstruct
+  /*@PostConstruct
    public void initializeDB(){
-      Image image1 = new Image("Bogi Wogi");
-      Image image2 = new Image("Fe Buffet");
-      Image image3 = new Image("Dani Banani");
-      Image image4 = new Image("Mubrick Brack");
-
-
-   }
+      Url url1 = new Url("Our github repository", "https://github.com/mubibic/Tech_1_Teletearbies");
+      urlService.saveUrl(url1);
+   }*/
 
 }

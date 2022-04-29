@@ -4,15 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import tech_1_teletearbies.Service.ImageService;
-import tech_1_teletearbies.entity.Image;
+import tech_1_teletearbies.Service.UrlService;
+import tech_1_teletearbies.entity.Url;
 
 import java.util.List;
 
 @Controller
-public class ImageController {
+public class UrlController {
     @Autowired
-    ImageService imageService;
+    UrlService urlService;
 
     @RequestMapping("/")
     public String index() {
@@ -38,8 +38,8 @@ public class ImageController {
     @RequestMapping("/database")
     //The model is the one responsible for the relationship between the frontend and backend
     public String database(Model model) {
-        List<Image> listImages = imageService.getAllImages();
-        model.addAttribute("listImages", listImages);
+        List<Url> listUrl = urlService.getAllUrl();
+        model.addAttribute("listUrl", listUrl);
         return "database";
     }
 
